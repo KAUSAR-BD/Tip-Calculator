@@ -3,20 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Tip Calculator</title>
   </head>
   <body>
-    <h2>Tip Calculator</h2>
+    <main class="calculator">
+      <h1>Tip Calculator</h1>
+      <p class="subtitle">Calculate your tip quickly and easily</p>
 
-    <label for="billAmount">Bill Amount ($):</label>
-    <input type="number" id="billAmount" />
+      <div class="form-group">
+        <label for="billAmount">Bill Amount ($):</label>
+        <div class="input-wrapper">
+          <span>$</span>
+          <input type="number" id="billAmount" placeholder="0.00" min="0" />
+        </div>
+      </div>
 
-    <label for="tipAmount">Tip Percentage (%):</label>
-    <input type="number" id="tipAmount" />
+      <div class="form-group">
+        <label for="tipAmount">Tip Percentage (%):</label>
+        <div class="input-wrapper">
+          <span>$</span>
+          <input type="number" id="tipAmount" placeholder="15" min="0" />
+        </div>
+      </div>
 
-    <button onclick="calculateTip()">Calculate Tip</button>
+      <button onclick="calculateTip()">Calculate Tip</button>
 
-    <div id="tipResult"></div>
+      <div id="tipResult" class="result"></div>
+    </main>
 
     <script src="script.js"></script>
   </body>
